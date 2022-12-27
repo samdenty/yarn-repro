@@ -1,0 +1,69 @@
+{
+  "name": "widgetbot",
+  "version": "1.0.0",
+  "description": "Use git for version control",
+  "main": "./src/main.js",
+  "scripts": {
+    "test": "yarn run build",
+    "snyk-protect": "snyk protect",
+    "prepublish": "yarn run snyk-protect",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/nedb": "^1.8.5",
+    "@types/node": "^8.0.57",
+    "@types/socket.io": "^1.4.31",
+    "babel-cli": "^6.9.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-regenerator": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "bake-cli": "^0.1.6",
+    "eslint": "^2.10.2",
+    "eslint-config-standard": "^5.3.1",
+    "eslint-plugin-promise": "^1.1.0",
+    "eslint-plugin-standard": "^1.3.2",
+    "minami": "^1.2.3",
+    "mocha": "^2.5.2",
+    "standard-version": "^2.2.1",
+    "watchd": "github:mklabs/watchd"
+  },
+  "bake": {
+    "description": "Scaffold a basic ES6 setup",
+    "scripts": {
+      "start": "echo Starting generation of default template",
+      "prestart": "echo prestart",
+      "poststart": "echo poststart",
+      "install": "npm install --loglevel warn --cache-min Infinity",
+      "preinstall": "echo Installing dependencies ...",
+      "postinstall": "npm ls --depth 0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "private"
+  },
+  "author": "Voakie",
+  "license": "ISC",
+  "dependencies": {
+    "@types/request": "^2.0.9",
+    "bufferutil": "^3.0.2",
+    "chalk": "^1.1.3",
+    "compare-urls": "^1.0.0",
+    "country-emoji": "^1.2.0",
+    "discord.js": "github:widgetbot-io/discord.js#stable",
+    "express": "^4.16.2",
+    "geoip-lite": "^1.2.1",
+    "jsdoc": "^3.5.4",
+    "nedb": "^1.8.0",
+    "node_cloudflare": "0.0.4",
+    "pmx": "^1.1.0",
+    "profanity-util": "^0.2.0",
+    "query-string": "^5.0.0",
+    "request": "^2.81.0",
+    "snyk": "^1.46.0",
+    "socket.io": "^2.0.3",
+    "typescript": "^2.6.2",
+    "uws": "^0.14.1"
+  },
+  "snyk": true
+}
